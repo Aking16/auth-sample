@@ -17,6 +17,12 @@ export function middleware(request: NextRequest) {
     return NextResponse.redirect(new URL('/dashboard', request.url));
   }
 
+  // If user IS logged in and tries to access /
+  // Redirect to /dashboard
+  if (token && pathname === '/') {
+    return NextResponse.redirect(new URL('/dashboard', request.url));
+  }
+
   return NextResponse.next();
 }
 

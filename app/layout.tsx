@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "@/styles/globals.scss";
 import { ThemeProvider } from "@/context/theme-provider";
+import NextTopLoader from 'nextjs-toploader';
 
 export const vazir = localFont({
   src: [
@@ -68,6 +69,7 @@ export default function RootLayout({
   return (
     <html lang="fa-IR" dir="rtl">
       <body className={`${vazir.className}`}>
+        <NextTopLoader />
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

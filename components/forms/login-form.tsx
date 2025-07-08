@@ -8,8 +8,13 @@ import styles from "./login-form.module.scss";
 import Input from "../ui/input";
 import Label from "../ui/label";
 import { Button } from "../ui/button";
+import axios from "axios";
+import { RandomUserResponse } from "@/types";
+import { useRouter } from "nextjs-toploader/app";
 
 export default function LoginForm() {
+  const router = useRouter();
+
   const {
     register,
     handleSubmit,
@@ -18,8 +23,18 @@ export default function LoginForm() {
     resolver: zodResolver(loginFormSchema),
   });
 
-  const onSubmit = (data: loginFormSchemaType) => {
+  const onSubmit = async (data: loginFormSchemaType) => {
     console.log("Form Data:", data);
+
+    try {
+      const res: RandomUserResponse = (await axios.get("https://randomuser.me/api/?results=1&nat=us?")).data;
+
+      localStorage.setItem("user", JSON.stringify(res.results[0]));
+      document.cookie = `user-token=${JSON.stringify(res.results[0].id.value)}; path=/; max-age=3600`;
+      router.push("/dashboard");
+    } catch (error) {
+      console.error("Error fetching user data:", error);
+    }
   };
 
   return (
