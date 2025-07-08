@@ -4,7 +4,7 @@ import "@/styles/globals.scss";
 import { ThemeProvider } from "@/context/theme-provider";
 import NextTopLoader from 'nextjs-toploader';
 
-export const vazir = localFont({
+const vazirmatn = localFont({
   src: [
     {
       path: '../public/fonts/webfonts/Vazirmatn-RD-FD-Thin.woff2',
@@ -68,7 +68,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fa-IR" dir="rtl">
-      <body className={`${vazir.className}`}>
+      <body className={`${vazirmatn.className}`}>
         <NextTopLoader color="#9B2E39" />
         <ThemeProvider
           attribute="class"
