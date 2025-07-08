@@ -2,17 +2,23 @@
 
 .page {
   @include container;
-  padding: 1rem;
+
+  & {
+    padding: 1rem;
+  }
 }
 
 .container {
   @include container;
-  display: flex;
-  flex-direction: column;
-  justify-items: center;
-  align-items: center;
-  justify-content: space-evenly;
-  height: 95vh;
+
+  & {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 95vh;
+  }
 
   @media (min-width: 1024px) {
     flex-direction: row;

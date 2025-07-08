@@ -2,13 +2,16 @@
 
 .page {
   @include container;
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-items: center;
-  align-items: center;
-  gap: 2rem;
-  height: 95vh;
+
+  & {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    gap: 2rem;
+    height: 95vh;
+  }
 }
 
 .center {
