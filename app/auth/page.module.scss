@@ -8,10 +8,15 @@
 .container {
   @include container;
   display: flex;
+  flex-direction: column;
   justify-items: center;
   align-items: center;
   justify-content: space-evenly;
   height: 95vh;
+
+  @media (min-width: 1024px) {
+    flex-direction: row;
+  }
 }
 
 .formContainer {
@@ -25,4 +30,16 @@
   font-size: 1.25rem;
   font-weight: 700;
   margin-bottom: 3rem;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+
+  @media (min-width: 1024px) {
+    width: 500px;
+    height: 500px;
+    aspect-ratio: unset;
+  }
 }

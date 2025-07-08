@@ -12,7 +12,9 @@ export default function Page() {
           <h1 className={styles.header}>ورود</h1>
           <LoginForm />
         </div>
-        <Image src="/images/login.svg" alt="Login picture" width={500} height={500} />
+        <div className={styles.imageWrapper}>
+          <Image src="/images/login.svg" alt="Login picture" fill />
+        </div>
       </div>
     </main>
   );

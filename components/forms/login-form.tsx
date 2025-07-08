@@ -64,6 +64,7 @@ export default function LoginForm() {
         <Input
           type="password"
           aria-invalid={errors.password ? "true" : "false"}
+          autoComplete="off"
           {...register("password")}
         />
         {errors.password && <ErrorMessage message={errors.password.message} />}
@@ -74,6 +75,7 @@ export default function LoginForm() {
         <Input
           type="password"
           aria-invalid={errors.confPassword ? "true" : "false"}
+          autoComplete="off"
           {...register("confPassword")}
         />
         {errors.confPassword && <ErrorMessage message={errors.confPassword.message} />}
