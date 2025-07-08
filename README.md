@@ -60,7 +60,7 @@ types/          # TypeScript type definitions
 ## 🧪 Running Tests
 
 ```bash
-npm test # or yarn test, pnpm test
+npm run start # or yarn test, pnpm test
 ```
 
 Test coverage reports are available in the `coverage/` directory after running tests.
@@ -87,6 +87,11 @@ Deploy easily on [Vercel](https://vercel.com/new?utm_medium=default-template&fil
 
 See [Next.js deployment docs](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
 
+#### OR by running your own local server.
+```bash
+npm run build # or yarn build, pnpm build
+npm run start # or yarn start, pnpm start
+```
 
 
 ## 📝 License
