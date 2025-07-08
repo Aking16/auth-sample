@@ -1,16 +1,16 @@
 "use client";
 
-import { zodResolver } from "@hookform/resolvers/zod";
+import ErrorMessage from "@/components/messages/error-message";
+import { Button } from "@/components/ui/button";
+import Input from "@/components/ui/input";
+import Label from "@/components/ui/label";
 import { loginFormSchema, loginFormSchemaType } from "@/schema/loginFormSchema";
-import { useForm } from "react-hook-form";
-import ErrorMessage from "../messages/error-message";
-import styles from "./login-form.module.scss";
-import Input from "../ui/input";
-import Label from "../ui/label";
-import { Button } from "../ui/button";
-import axios from "axios";
 import { RandomUserResponse } from "@/types";
+import { zodResolver } from "@hookform/resolvers/zod";
+import axios from "axios";
 import { useRouter } from "nextjs-toploader/app";
+import { useForm } from "react-hook-form";
+import styles from "./login-form.module.scss";
 
 export default function LoginForm() {
   const router = useRouter();
@@ -40,8 +40,13 @@ export default function LoginForm() {
   return (
     <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
       <div className={styles.inputContainer}>
-        <Label aria-invalid={errors.username ? "true" : "false"}>نام کاربری</Label>
+        <Label
+          htmlFor="username"
+          aria-invalid={errors.username ? "true" : "false"}>
+          نام کاربری
+        </Label>
         <Input
+          id="username"
           type="text"
           aria-invalid={errors.username ? "true" : "false"}
           {...register("username")}
@@ -50,8 +55,13 @@ export default function LoginForm() {
       </div>
 
       <div className={styles.inputContainer}>
-        <Label aria-invalid={errors.phoneNumber ? "true" : "false"}>شماره تلفن</Label>
+        <Label
+          htmlFor="phoneNumber"
+          aria-invalid={errors.phoneNumber ? "true" : "false"}>
+          شماره تلفن
+        </Label>
         <Input
+          id="phoneNumber"
           type="text"
           aria-invalid={errors.phoneNumber ? "true" : "false"}
           {...register("phoneNumber")}
@@ -60,8 +70,13 @@ export default function LoginForm() {
       </div>
 
       <div className={styles.inputContainer}>
-        <Label aria-invalid={errors.password ? "true" : "false"}>رمز عبور</Label>
+        <Label
+          htmlFor="password"
+          aria-invalid={errors.password ? "true" : "false"}>
+          رمز عبور
+        </Label>
         <Input
+          id="password"
           type="password"
           aria-invalid={errors.password ? "true" : "false"}
           autoComplete="off"
@@ -71,8 +86,13 @@ export default function LoginForm() {
       </div>
 
       <div className={styles.inputContainer}>
-        <Label aria-invalid={errors.confPassword ? "true" : "false"}>تایید رمز عبور</Label>
+        <Label
+          htmlFor="confPassword"
+          aria-invalid={errors.confPassword ? "true" : "false"}>
+          تایید رمز عبور
+        </Label>
         <Input
+          id="confPassword"
           type="password"
           aria-invalid={errors.confPassword ? "true" : "false"}
           autoComplete="off"
