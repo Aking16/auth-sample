@@ -69,7 +69,7 @@ export default function RootLayout({
   return (
     <html lang="fa-IR" dir="rtl">
       <body className={`${vazir.className}`}>
-        <NextTopLoader />
+        <NextTopLoader color="#9B2E39" />
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
