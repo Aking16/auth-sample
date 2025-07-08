@@ -1,4 +1,4 @@
-import LoginForm from '@/components/forms/login-form';
+import LoginForm from '@/components/forms/login-form/login-form';
 import Image from 'next/image';
 import styles from "./page.module.scss";
 import { ThemeToggle } from '@/components/ui/theme-toggle';

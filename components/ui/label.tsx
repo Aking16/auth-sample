@@ -1,7 +1,7 @@
-import { FC, InputHTMLAttributes } from 'react';
+import { FC, LabelHTMLAttributes } from 'react';
 import styles from './label.module.scss';
 
-const Label: FC<InputHTMLAttributes<HTMLLabelElement>> = (props) => {
+const Label: FC<LabelHTMLAttributes<HTMLLabelElement>> = (props) => {
   return (
     <label
       {...props}
