@@ -1,0 +1,23 @@
+@use '../../styles/abstracts/mixins' as *;
+
+.page {
+  @include container;
+
+  & {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    gap: 2rem;
+    height: 95vh;
+  }
+}
+
+.center {
+  text-align: center;
+}
+
+.button {
+  width: 40%;
+}

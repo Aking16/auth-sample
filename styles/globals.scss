@@ -1,2 +1,3 @@
-@import 'abstracts/variables';
-@import 'base/globals';
+@use './abstracts/variables';
+@use './abstracts/mixins';
+@use './base/globals';
