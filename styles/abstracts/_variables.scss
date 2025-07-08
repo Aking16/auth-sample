@@ -1,10 +1,44 @@
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-  --destructive: #ff4d4f;
+  --radius: 0.625rem;
+  --background: rgb(255, 255, 255);
+  --foreground: rgb(37, 37, 37);
+  --card: rgb(255, 255, 255);
+  --card-foreground: rgb(37, 37, 37);
+  --popover: rgb(255, 255, 255);
+  --popover-foreground: rgb(37, 37, 37);
+  --primary: rgb(167, 47, 59);
+  --primary-foreground: rgb(251, 251, 251);
+  --secondary: rgb(247, 247, 247);
+  --secondary-foreground: rgb(104, 104, 104);
+  --muted: rgb(247, 247, 247);
+  --muted-foreground: rgb(142, 142, 142);
+  --accent: rgb(247, 247, 247);
+  --accent-foreground: rgb(104, 104, 104);
+  --destructive: rgb(147, 62, 25);
+  --border: rgb(235, 235, 235);
+  --input: rgb(203, 203, 203);
+  --ring: rgb(181, 181, 181);
+}
 
-  @media (prefers-color-scheme: dark) {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html.dark {
+  color-scheme: dark;
+
+  --background: rgb(37, 37, 37);
+  --foreground: rgb(251, 251, 251);
+  --card: rgb(104, 104, 104);
+  --card-foreground: rgb(251, 251, 251);
+  --popover: rgb(69, 69, 69);
+  --popover-foreground: rgb(251, 251, 251);
+  --primary: rgb(167, 47, 59);
+  --primary-foreground: rgb(251, 251, 251);
+  --secondary: rgb(69, 69, 69);
+  --secondary-foreground: rgb(251, 251, 251);
+  --muted: rgb(69, 69, 69);
+  --muted-foreground: rgb(142, 142, 142);
+  --accent: rgb(95, 95, 95);
+  --accent-foreground: rgb(251, 251, 251);
+  --destructive: rgb(179, 49, 22);
+  --border: rgba(255, 255, 255, 0.1);
+  --input: rgba(255, 255, 255, 0.15);
+  --ring: rgb(142, 142, 142);
 }
