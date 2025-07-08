@@ -1,0 +1,17 @@
+@use '../../styles/abstracts/' as *;
+
+.page {
+  @include container;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 95vh;
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+}
